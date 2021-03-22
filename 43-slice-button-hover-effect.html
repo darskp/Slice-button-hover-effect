@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        :root {
+            --bg-color: #16a085;
+            --box-color: #27ae60;
+            --box-hover-color: #161313;
+        }
+
+        .banner {
+            height: 100vh;
+            width: 100vw;
+            background-color: var(--bg-color);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .center {
+            width: inherit;
+            height: inherit;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 3rem 4rem;
+            position: relative;
+            background-color: var(--box-color);
+            color: #161313;
+            border-radius: 1rem;
+            font-family: 'Roboto', sans-serif;
+            font-size: 3rem;
+            letter-spacing: 0.1rem;
+            -webkit-transition: 0.6s all;
+            transition: 0.6s all;
+            overflow: hidden;
+            -webkit-box-shadow: 0.7rem 0.7rem 0.5rem 0rem rgba(50, 50, 50, 0.75);
+            box-shadow: 0.7rem 0.7rem 0.5rem 0rem rgba(50, 50, 50, 0.75);
+        }
+
+        a:hover {
+            color: #ffffff;
+            background-color: var(--box-hover-color);
+        }
+
+        a::before {
+            content: "";
+            width: 100%;
+            height: 2rem;
+            -webkit-transform: translateX(-100%) rotate(45deg);
+            transform: translateX(-100%) rotate(45deg);
+            position: absolute;
+            top: 10%;
+            -webkit-transition: 1s all;
+            transition: 1s all;
+            left: 0%;
+        }
+
+        a:hover::before {
+            -webkit-transform: translateX(100%) rotate(45deg);
+            transform: translateX(100%) rotate(45deg);
+            background-color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="center">
+            <a href="#">HOVER ME</a>
+        </div>
+    </div>
+</body>
+
+</html>
